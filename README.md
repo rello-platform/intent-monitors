@@ -83,3 +83,7 @@ export const propertyWatchScan = schedules.task({
 `v0.x.y` — pre-1.0, breaking changes possible. The package is `private: true`; install via `github:rello-platform/intent-monitors#vX.Y.Z` (public repo, no GitHub Packages registry).
 
 `dist/` is committed per Rello platform convention (Railway nixpacks unauthenticated clone has no build step).
+
+## Contributor setup
+
+After cloning, run `npm run hooks` once to wire the husky hooks (`core.hooksPath .husky`). This used to be the `prepare` script; C-33 (2026-09-16) moved it off the `prepare` name because npm runs a nested, lockfile-less install inside every git dependency whose manifest carries `prepare` (or `build`), and one such install failed two app builds on a registry blip.

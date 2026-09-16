@@ -1,6 +1,6 @@
 {
   "name": "@rello-platform/intent-monitors",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Shared scan-tick primitive (IntentMonitor + runScanTick + idempotencyKey + dlqRecord) for the Rello platform.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -11,9 +11,9 @@
     "LICENSE"
   ],
   "scripts": {
-    "build": "tsc",
-    "prepublishOnly": "npm run build",
-    "prepare": "git config core.hooksPath .husky || true"
+    "compile": "tsc",
+    "prepublishOnly": "npm run compile",
+    "hooks": "git config core.hooksPath .husky || true"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
